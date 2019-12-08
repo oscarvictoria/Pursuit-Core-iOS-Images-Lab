@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6F5480239DA3FC002A4381 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */; };
+		BE6F5482239DA456002A4381 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5481239DA456002A4381 /* Comic.swift */; };
+		BE6F5484239DA4A7002A4381 /* ComicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */; };
 		BEC83191239CA062005BF533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC83190239CA062005BF533 /* AppDelegate.swift */; };
 		BEC83193239CA062005BF533 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC83192239CA062005BF533 /* SceneDelegate.swift */; };
 		BEC83195239CA062005BF533 /* ComicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC83194239CA062005BF533 /* ComicsViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		BE6F5481239DA456002A4381 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicAPIClient.swift; sourceTree = "<group>"; };
 		BEC8318D239CA062005BF533 /* ImagesLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagesLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC83190239CA062005BF533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC83192239CA062005BF533 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				BEC83192239CA062005BF533 /* SceneDelegate.swift */,
 				BEC83194239CA062005BF533 /* ComicsViewController.swift */,
 				BEC83196239CA062005BF533 /* Main.storyboard */,
+				BE6F5481239DA456002A4381 /* Comic.swift */,
+				BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */,
+				BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */,
 				BEC83199239CA065005BF533 /* Assets.xcassets */,
 				BEC8319B239CA065005BF533 /* LaunchScreen.storyboard */,
 				BEC8319E239CA065005BF533 /* Info.plist */,
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6F5480239DA3FC002A4381 /* NetworkHelper.swift in Sources */,
 				BEC83195239CA062005BF533 /* ComicsViewController.swift in Sources */,
+				BE6F5482239DA456002A4381 /* Comic.swift in Sources */,
+				BE6F5484239DA4A7002A4381 /* ComicAPIClient.swift in Sources */,
 				BEC83191239CA062005BF533 /* AppDelegate.swift in Sources */,
 				BEC83193239CA062005BF533 /* SceneDelegate.swift in Sources */,
 			);
