@@ -9,11 +9,9 @@
 import UIKit
 
 class PokemonCell: UITableViewCell {
+    
 @IBOutlet weak var nameLabel: UILabel!
-    
-    
-    
-    @IBOutlet weak var pokemonImage: UIImageView!
+@IBOutlet weak var pokemonImage: UIImageView!
     
     func configured(for pokemon: Cards) {
         nameLabel.text = pokemon.name

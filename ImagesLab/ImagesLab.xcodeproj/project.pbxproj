@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1E9473239EDE6800A4DB14 /* UsersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E9472239EDE6800A4DB14 /* UsersAPIClient.swift */; };
+		BE1E9475239EDEDA00A4DB14 /* RandomUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E9474239EDEDA00A4DB14 /* RandomUsers.swift */; };
+		BE1E9477239EE83300A4DB14 /* RandomUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E9476239EE83300A4DB14 /* RandomUserCell.swift */; };
 		BE6F5480239DA3FC002A4381 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */; };
 		BE6F5482239DA456002A4381 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5481239DA456002A4381 /* Comic.swift */; };
 		BE6F5484239DA4A7002A4381 /* ComicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE1E9472239EDE6800A4DB14 /* UsersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPIClient.swift; sourceTree = "<group>"; };
+		BE1E9474239EDEDA00A4DB14 /* RandomUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUsers.swift; sourceTree = "<group>"; };
+		BE1E9476239EE83300A4DB14 /* RandomUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserCell.swift; sourceTree = "<group>"; };
 		BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		BE6F5481239DA456002A4381 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicAPIClient.swift; sourceTree = "<group>"; };
@@ -78,11 +84,14 @@
 		BEC8318F239CA062005BF533 /* ImagesLab */ = {
 			isa = PBXGroup;
 			children = (
+				BEC83196239CA062005BF533 /* Main.storyboard */,
 				BEC83190239CA062005BF533 /* AppDelegate.swift */,
 				BEC83192239CA062005BF533 /* SceneDelegate.swift */,
 				BEC83194239CA062005BF533 /* ComicsViewController.swift */,
-				BEC83196239CA062005BF533 /* Main.storyboard */,
+				BE1E9476239EE83300A4DB14 /* RandomUserCell.swift */,
 				BE6F548F239DB24A002A4381 /* PokemonAPIClient.swift */,
+				BE1E9472239EDE6800A4DB14 /* UsersAPIClient.swift */,
+				BE1E9474239EDEDA00A4DB14 /* RandomUsers.swift */,
 				BE6F548B239DAF21002A4381 /* UsersDetailViewController.swift */,
 				BE6F5489239DAF03002A4381 /* UsersViewController.swift */,
 				BE6F5487239DAED1002A4381 /* PokemonDetailViewController.swift */,
@@ -172,10 +181,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE6F5480239DA3FC002A4381 /* NetworkHelper.swift in Sources */,
+				BE1E9473239EDE6800A4DB14 /* UsersAPIClient.swift in Sources */,
 				BEC83195239CA062005BF533 /* ComicsViewController.swift in Sources */,
 				BE6F5482239DA456002A4381 /* Comic.swift in Sources */,
 				BE6F5490239DB24A002A4381 /* PokemonAPIClient.swift in Sources */,
 				BE6F5486239DAE86002A4381 /* PokemonViewController.swift in Sources */,
+				BE1E9477239EE83300A4DB14 /* RandomUserCell.swift in Sources */,
 				BE6F5484239DA4A7002A4381 /* ComicAPIClient.swift in Sources */,
 				BE6F5496239E1529002A4381 /* ImageClient.swift in Sources */,
 				BE6F5488239DAED1002A4381 /* PokemonDetailViewController.swift in Sources */,
@@ -185,6 +196,7 @@
 				BE6F548A239DAF03002A4381 /* UsersViewController.swift in Sources */,
 				BE6F548C239DAF21002A4381 /* UsersDetailViewController.swift in Sources */,
 				BEC83193239CA062005BF533 /* SceneDelegate.swift in Sources */,
+				BE1E9475239EDEDA00A4DB14 /* RandomUsers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

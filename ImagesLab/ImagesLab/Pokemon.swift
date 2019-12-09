@@ -18,11 +18,11 @@ struct Cards: Decodable {
     let imageUrl: String
     let imageUrlHiRes: String
     let set: String
+    let types: [String]?
 }
 
-struct Weakness: Decodable {
-    let type: String
-    let value: String
-}
+
+
+
 
 

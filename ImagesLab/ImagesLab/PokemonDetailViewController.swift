@@ -30,6 +30,7 @@ var detailCards: Cards?
         }
         detailNameLabel.text = theCards.name
         detailSetLabel.text = theCards.set
+//        detailWeaknessLabel.text = theCards
         ImageClient.fetchImage(for: theCards.imageUrlHiRes)  { [weak self] (result) in
                  switch result {
                  case .failure(let error):
