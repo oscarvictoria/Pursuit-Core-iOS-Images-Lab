@@ -12,13 +12,13 @@ class PokemonViewController: UIViewController {
 
 @IBOutlet weak var tableView: UITableView!
 @IBOutlet weak var searchBar: UISearchBar!
-    
+
     var pokeCards = [Cards]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            
+
         }
     }
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class PokemonViewController: UIViewController {
         tableView.delegate = self
         loadCards()
     }
-    
+
     func loadCards() {
         PokemonAPIClient.getCards { [weak self] (result) in
             switch result {
@@ -38,16 +38,24 @@ class PokemonViewController: UIViewController {
             }
         }
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let pokemonDVC = segue.destination as? PokemonDetailViewController,
+            let IndexPath = tableView.indexPathForSelectedRow else {
+                fatalError("error")
+        }
+        let pokemon = pokeCards[IndexPath.row]
+        pokemonDVC.detailCards = pokemon
+    }
 
 }
 
 extension PokemonViewController: UITableViewDataSource {
- 
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pokeCards.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as? PokemonCell else {
             fatalError("error")

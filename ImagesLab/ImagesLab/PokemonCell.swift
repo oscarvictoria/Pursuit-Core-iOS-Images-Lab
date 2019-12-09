@@ -9,19 +9,21 @@
 import UIKit
 
 class PokemonCell: UITableViewCell {
+@IBOutlet weak var nameLabel: UILabel!
     
     
     
     @IBOutlet weak var pokemonImage: UIImageView!
     
     func configured(for pokemon: Cards) {
-        ImageClient.fetchImage(for: pokemon.imageUrl) { (result) in
+        nameLabel.text = pokemon.name
+        ImageClient.fetchImage(for: pokemon.imageUrl)  { [weak self] (result) in
             switch result {
             case .failure(let error):
                 print("error \(error)")
             case .success(let image):
                 DispatchQueue.main.async {
-                    self.pokemonImage.image = image
+                    self?.pokemonImage.image = image
                 }
             }
         }
