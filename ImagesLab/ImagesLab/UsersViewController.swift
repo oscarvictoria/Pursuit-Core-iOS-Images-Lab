@@ -37,6 +37,15 @@ class UsersViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userDVC = segue.destination as? UsersDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("error")
+        }
+        let person = people[indexPath.row]
+        userDVC.theUsers = person
+    }
+    
 }
 
 extension UsersViewController: UITableViewDataSource {
