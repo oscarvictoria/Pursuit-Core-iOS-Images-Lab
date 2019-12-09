@@ -10,6 +10,12 @@
 		BE6F5480239DA3FC002A4381 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */; };
 		BE6F5482239DA456002A4381 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5481239DA456002A4381 /* Comic.swift */; };
 		BE6F5484239DA4A7002A4381 /* ComicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */; };
+		BE6F5486239DAE86002A4381 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5485239DAE86002A4381 /* PokemonViewController.swift */; };
+		BE6F5488239DAED1002A4381 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5487239DAED1002A4381 /* PokemonDetailViewController.swift */; };
+		BE6F548A239DAF03002A4381 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F5489239DAF03002A4381 /* UsersViewController.swift */; };
+		BE6F548C239DAF21002A4381 /* UsersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F548B239DAF21002A4381 /* UsersDetailViewController.swift */; };
+		BE6F548E239DAF57002A4381 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F548D239DAF57002A4381 /* Pokemon.swift */; };
+		BE6F5490239DB24A002A4381 /* PokemonAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F548F239DB24A002A4381 /* PokemonAPIClient.swift */; };
 		BEC83191239CA062005BF533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC83190239CA062005BF533 /* AppDelegate.swift */; };
 		BEC83193239CA062005BF533 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC83192239CA062005BF533 /* SceneDelegate.swift */; };
 		BEC83195239CA062005BF533 /* ComicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC83194239CA062005BF533 /* ComicsViewController.swift */; };
@@ -22,6 +28,12 @@
 		BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		BE6F5481239DA456002A4381 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicAPIClient.swift; sourceTree = "<group>"; };
+		BE6F5485239DAE86002A4381 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
+		BE6F5487239DAED1002A4381 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
+		BE6F5489239DAF03002A4381 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		BE6F548B239DAF21002A4381 /* UsersDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDetailViewController.swift; sourceTree = "<group>"; };
+		BE6F548D239DAF57002A4381 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		BE6F548F239DB24A002A4381 /* PokemonAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIClient.swift; sourceTree = "<group>"; };
 		BEC8318D239CA062005BF533 /* ImagesLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagesLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC83190239CA062005BF533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC83192239CA062005BF533 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +78,15 @@
 				BEC83192239CA062005BF533 /* SceneDelegate.swift */,
 				BEC83194239CA062005BF533 /* ComicsViewController.swift */,
 				BEC83196239CA062005BF533 /* Main.storyboard */,
+				BE6F548F239DB24A002A4381 /* PokemonAPIClient.swift */,
+				BE6F548B239DAF21002A4381 /* UsersDetailViewController.swift */,
+				BE6F5489239DAF03002A4381 /* UsersViewController.swift */,
+				BE6F5487239DAED1002A4381 /* PokemonDetailViewController.swift */,
+				BE6F5485239DAE86002A4381 /* PokemonViewController.swift */,
 				BE6F5481239DA456002A4381 /* Comic.swift */,
 				BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */,
 				BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */,
+				BE6F548D239DAF57002A4381 /* Pokemon.swift */,
 				BEC83199239CA065005BF533 /* Assets.xcassets */,
 				BEC8319B239CA065005BF533 /* LaunchScreen.storyboard */,
 				BEC8319E239CA065005BF533 /* Info.plist */,
@@ -150,8 +168,14 @@
 				BE6F5480239DA3FC002A4381 /* NetworkHelper.swift in Sources */,
 				BEC83195239CA062005BF533 /* ComicsViewController.swift in Sources */,
 				BE6F5482239DA456002A4381 /* Comic.swift in Sources */,
+				BE6F5490239DB24A002A4381 /* PokemonAPIClient.swift in Sources */,
+				BE6F5486239DAE86002A4381 /* PokemonViewController.swift in Sources */,
 				BE6F5484239DA4A7002A4381 /* ComicAPIClient.swift in Sources */,
+				BE6F5488239DAED1002A4381 /* PokemonDetailViewController.swift in Sources */,
+				BE6F548E239DAF57002A4381 /* Pokemon.swift in Sources */,
 				BEC83191239CA062005BF533 /* AppDelegate.swift in Sources */,
+				BE6F548A239DAF03002A4381 /* UsersViewController.swift in Sources */,
+				BE6F548C239DAF21002A4381 /* UsersDetailViewController.swift in Sources */,
 				BEC83193239CA062005BF533 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

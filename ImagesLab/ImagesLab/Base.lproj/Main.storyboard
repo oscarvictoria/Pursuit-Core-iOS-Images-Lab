@@ -92,7 +92,7 @@
         <!--Pokemon-->
         <scene sceneID="KuH-3f-GkF">
             <objects>
-                <viewController id="5K8-Gr-jlX" sceneMemberID="viewController">
+                <viewController id="5K8-Gr-jlX" customClass="PokemonViewController" customModule="ImagesLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P3O-8r-pQL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,15 +125,18 @@
                         <viewLayoutGuide key="safeArea" id="UMg-Xu-drj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pokemon" id="Dh4-0s-3yy"/>
+                    <connections>
+                        <outlet property="tableView" destination="Q2i-qf-WDI" id="wUM-P7-7qe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CMV-7N-mJK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="787.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokemon Detail View Controller-->
         <scene sceneID="jpm-vr-yDf">
             <objects>
-                <viewController id="iIG-mc-Dbk" sceneMemberID="viewController">
+                <viewController id="iIG-mc-Dbk" customClass="PokemonDetailViewController" customModule="ImagesLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4i5-vb-emE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +152,7 @@
         <!--Random Users-->
         <scene sceneID="Xbo-p3-vey">
             <objects>
-                <viewController id="0iF-v6-YSZ" sceneMemberID="viewController">
+                <viewController id="0iF-v6-YSZ" customClass="UsersViewController" customModule="ImagesLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZD-bn-L2Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="1470.5357142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Users Detail View Controller-->
         <scene sceneID="suS-5L-yae">
             <objects>
-                <viewController id="rxU-27-xJV" sceneMemberID="viewController">
+                <viewController id="rxU-27-xJV" customClass="UsersDetailViewController" customModule="ImagesLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9H2-fP-864">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,6 +212,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="L84-2G-z4I" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xqU-OQ-Cb3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
