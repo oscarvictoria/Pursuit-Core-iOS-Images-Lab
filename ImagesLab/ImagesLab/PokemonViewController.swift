@@ -10,7 +10,8 @@ import UIKit
 
 class PokemonViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+@IBOutlet weak var tableView: UITableView!
+@IBOutlet weak var searchBar: UISearchBar!
     
     var pokeCards = [Cards]() {
         didSet {
@@ -23,6 +24,7 @@ class PokemonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         loadCards()
     }
     
@@ -47,9 +49,17 @@ extension PokemonViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as? PokemonCell else {
+            fatalError("error")
+        }
         let card = pokeCards[indexPath.row]
-        cell.textLabel?.text = card.name
+        cell.configured(for: card)
         return cell
+    }
+}
+
+extension PokemonViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
     }
 }

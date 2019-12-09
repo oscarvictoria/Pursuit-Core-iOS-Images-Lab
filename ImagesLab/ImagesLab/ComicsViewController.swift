@@ -18,14 +18,14 @@ class ComicsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ComicAPIClient.getComics { result in
-            switch result {
-            case .failure(let error):
-                print("failure: \(error)")
-            case .success(let comics):
-                dump(comics)
-            }
-        }
+//        ComicAPIClient.getComics { result in
+//            switch result {
+//            case .failure(let error):
+//                print("failure: \(error)")
+//            case .success(let comics):
+//                dump(comics)
+//            }
+//        }
     }
     
     @IBAction func mostRecentButton(_ sender: UIButton) {

@@ -98,29 +98,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-qf-WDI">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="hHe-bE-1Bw">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" rowHeight="109" id="hHe-bE-1Bw" customClass="PokemonCell" customModule="ImagesLab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hHe-bE-1Bw" id="5tw-RH-jlX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ed-JY-Cd2">
+                                                    <rect key="frame" x="120" y="19" width="174" height="71"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="115" id="ejI-8b-Ubd"/>
+                                                        <constraint firstAttribute="width" constant="174" id="lDX-cc-tkk"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5ed-JY-Cd2" secondAttribute="trailing" constant="100" id="Ve6-Ye-zuo"/>
+                                                <constraint firstItem="5ed-JY-Cd2" firstAttribute="leading" secondItem="5tw-RH-jlX" secondAttribute="leadingMargin" constant="100" id="eoK-eT-MvJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5ed-JY-Cd2" secondAttribute="bottom" constant="8" id="hlv-ln-onm"/>
+                                                <constraint firstItem="5ed-JY-Cd2" firstAttribute="top" secondItem="5tw-RH-jlX" secondAttribute="topMargin" constant="8" id="whg-RI-s2g"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="pokemonImage" destination="5ed-JY-Cd2" id="O2V-LT-6sr"/>
                                             <segue destination="iIG-mc-Dbk" kind="show" id="mhH-9s-0M8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-9Y-Gae">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Q2i-qf-WDI" firstAttribute="trailing" secondItem="UMg-Xu-drj" secondAttribute="trailing" id="0w6-K9-HhT"/>
-                            <constraint firstItem="Q2i-qf-WDI" firstAttribute="top" secondItem="UMg-Xu-drj" secondAttribute="top" id="jas-EB-0Jk"/>
-                            <constraint firstAttribute="bottom" secondItem="Q2i-qf-WDI" secondAttribute="bottom" id="kQa-4x-wof"/>
-                            <constraint firstItem="Q2i-qf-WDI" firstAttribute="leading" secondItem="UMg-Xu-drj" secondAttribute="leading" id="nk3-le-5iO"/>
+                            <constraint firstAttribute="bottom" secondItem="Q2i-qf-WDI" secondAttribute="bottom" id="5V7-by-uSD"/>
+                            <constraint firstItem="Q2i-qf-WDI" firstAttribute="top" secondItem="aRg-9Y-Gae" secondAttribute="bottom" id="Gp4-Vp-6m0"/>
+                            <constraint firstItem="aRg-9Y-Gae" firstAttribute="top" secondItem="UMg-Xu-drj" secondAttribute="top" id="IIK-ij-zlC"/>
+                            <constraint firstItem="aRg-9Y-Gae" firstAttribute="leading" secondItem="P3O-8r-pQL" secondAttribute="leading" id="Ks3-rs-ARh"/>
+                            <constraint firstItem="Q2i-qf-WDI" firstAttribute="trailing" secondItem="UMg-Xu-drj" secondAttribute="trailing" id="V3t-1O-DUz"/>
+                            <constraint firstAttribute="trailing" secondItem="aRg-9Y-Gae" secondAttribute="trailing" id="bXi-x3-idw"/>
+                            <constraint firstItem="Q2i-qf-WDI" firstAttribute="leading" secondItem="UMg-Xu-drj" secondAttribute="leading" id="pAf-MG-CTD"/>
+                            <constraint firstItem="Q2i-qf-WDI" firstAttribute="top" secondItem="aRg-9Y-Gae" secondAttribute="bottom" id="ty8-xO-U3H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UMg-Xu-drj"/>
                     </view>
