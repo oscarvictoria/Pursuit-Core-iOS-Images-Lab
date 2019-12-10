@@ -25,12 +25,30 @@ var detailCards: Cards?
     }
     
     func updateUI() {
+        
+        
         guard let theCards = detailCards else {
             fatalError("error")
         }
+        
+        guard let weaknesses = theCards.weaknesses else {
+                return
+        }
+        
+        guard let types = theCards.types else {
+            return
+        }
+        
+        for type in types {
+            detailTypesLabel.text = "Type - \(type)"
+        }
+        
+        for weakness in weaknesses {
+            detailWeaknessLabel.text = "Weakness - \(weakness.type)"
+        }
         detailNameLabel.text = theCards.name
         detailSetLabel.text = theCards.set
-//        detailWeaknessLabel.text = theCards
+//        detailWeaknessLabel.text = weak
         ImageClient.fetchImage(for: theCards.imageUrlHiRes)  { [weak self] (result) in
                  switch result {
                  case .failure(let error):
