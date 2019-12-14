@@ -65,6 +65,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEC2293D23A46B1D001859FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F5485239DAE86002A4381 /* PokemonViewController.swift */,
+				BE6F5487239DAED1002A4381 /* PokemonDetailViewController.swift */,
+				BE6F5489239DAF03002A4381 /* UsersViewController.swift */,
+				BE6F548B239DAF21002A4381 /* UsersDetailViewController.swift */,
+				BEC83194239CA062005BF533 /* ComicsViewController.swift */,
+				BE6F5493239E139F002A4381 /* PokemonCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEC2293E23A46B2E001859FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BE1E9476239EE83300A4DB14 /* RandomUserCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BEC2293F23A46B3D001859FD /* NetworkHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */,
+				BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */,
+				BE6F5495239E1529002A4381 /* ImageClient.swift */,
+				BE6F548F239DB24A002A4381 /* PokemonAPIClient.swift */,
+				BE1E9472239EDE6800A4DB14 /* UsersAPIClient.swift */,
+			);
+			path = NetworkHelpers;
+			sourceTree = "<group>";
+		};
+		BEC2294023A46B4E001859FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F548D239DAF57002A4381 /* Pokemon.swift */,
+				BE6F5481239DA456002A4381 /* Comic.swift */,
+				BE1E9474239EDEDA00A4DB14 /* RandomUsers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BEC83184239CA062005BF533 = {
 			isa = PBXGroup;
 			children = (
@@ -84,24 +127,13 @@
 		BEC8318F239CA062005BF533 /* ImagesLab */ = {
 			isa = PBXGroup;
 			children = (
+				BEC2293E23A46B2E001859FD /* Cells */,
+				BEC2294023A46B4E001859FD /* Models */,
+				BEC2293F23A46B3D001859FD /* NetworkHelpers */,
+				BEC2293D23A46B1D001859FD /* Controllers */,
 				BEC83196239CA062005BF533 /* Main.storyboard */,
 				BEC83190239CA062005BF533 /* AppDelegate.swift */,
 				BEC83192239CA062005BF533 /* SceneDelegate.swift */,
-				BEC83194239CA062005BF533 /* ComicsViewController.swift */,
-				BE1E9476239EE83300A4DB14 /* RandomUserCell.swift */,
-				BE6F548F239DB24A002A4381 /* PokemonAPIClient.swift */,
-				BE1E9472239EDE6800A4DB14 /* UsersAPIClient.swift */,
-				BE1E9474239EDEDA00A4DB14 /* RandomUsers.swift */,
-				BE6F548B239DAF21002A4381 /* UsersDetailViewController.swift */,
-				BE6F5489239DAF03002A4381 /* UsersViewController.swift */,
-				BE6F5487239DAED1002A4381 /* PokemonDetailViewController.swift */,
-				BE6F5485239DAE86002A4381 /* PokemonViewController.swift */,
-				BE6F5493239E139F002A4381 /* PokemonCell.swift */,
-				BE6F5495239E1529002A4381 /* ImageClient.swift */,
-				BE6F5481239DA456002A4381 /* Comic.swift */,
-				BE6F5483239DA4A7002A4381 /* ComicAPIClient.swift */,
-				BE6F547F239DA3FC002A4381 /* NetworkHelper.swift */,
-				BE6F548D239DAF57002A4381 /* Pokemon.swift */,
 				BEC83199239CA065005BF533 /* Assets.xcassets */,
 				BEC8319B239CA065005BF533 /* LaunchScreen.storyboard */,
 				BEC8319E239CA065005BF533 /* Info.plist */,

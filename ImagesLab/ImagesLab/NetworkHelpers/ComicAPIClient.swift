@@ -18,8 +18,8 @@ enum NetworkError: Error {
 }
 
 struct ComicAPIClient {
-    static func getComics(completion: @escaping (Result<Comic, AppError>) -> ()) {
-        let endpointURL = "http://xkcd.com/info.0.json"
+    static func getComics(stepperValue: Int, completion: @escaping (Result<Comic, AppError>) -> ()) {
+        let endpointURL = "https://xkcd.com/\(stepperValue)/info.0.json"
         guard let url = URL(string: endpointURL) else {
             completion(.failure(.badURL(endpointURL)))
             return
