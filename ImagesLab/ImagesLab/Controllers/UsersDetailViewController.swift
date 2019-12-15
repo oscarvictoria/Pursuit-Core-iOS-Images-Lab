@@ -27,10 +27,10 @@ var theUsers: Users?
         guard let users = theUsers else {
             fatalError("error")
         }
-        detailAge.text = users.dob.age.description
-        detailName.text = users.name.fullName
-        detailPhone.text = users.phone
-        detailLocation.text = "\(users.location.city), \(users.location.state), \(users.location.country)"
+        detailAge.text = "Age: \(users.dob.age.description)"
+        detailName.text = "Name: \(users.name.fullName)"
+        detailPhone.text = "Phone: \(users.phone)"
+        detailLocation.text = "Location: \(users.location.city), \(users.location.state), \(users.location.country)"
         ImageClient.fetchImage(for: users.picture.large) { [weak self] (result) in
             switch result {
             case .failure(let error):

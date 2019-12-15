@@ -27,6 +27,7 @@ class ComicsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+    
         
     }
     
@@ -45,7 +46,6 @@ class ComicsViewController: UIViewController {
             case .failure(let error):
                 print("error: \(error)")
             case .success(let comic):
-                print(comic)
                 ImageClient.fetchImage(for: comic.img) { (result) in
                     switch result {
                     case .failure(let error):
@@ -68,7 +68,24 @@ class ComicsViewController: UIViewController {
     }
     
     @IBAction func randomButton(_ sender: UIButton) {
-        
+        ComicAPIClient.getComics(stepperValue: Int.random(in: 1...630)) { (result) in
+            switch result {
+            case .failure(let error):
+                print("error \(error)")
+            case .success(let comic):
+                print(comic)
+                ImageClient.fetchImage(for: comic.img) { (result) in
+                    switch result {
+                    case .failure(let error):
+                        print("error \(error)")
+                    case .success(let image):
+                        DispatchQueue.main.async {
+                            self.imageView.image = image
+                        }
+                    }
+                }
+            }
+        }
     }
     
     
